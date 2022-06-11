@@ -42,5 +42,5 @@ func main() {
 	mux.Handle("/static/", http.StripPrefix("/static/", fs))
 	mux.HandleFunc("/todo", todo)
 	
-	log.Fatal(http.ListenAndServe(":9091", mux))
+	log.Fatal(http.ListenAndServe("0.0.0.0:9091", mux))
 }
